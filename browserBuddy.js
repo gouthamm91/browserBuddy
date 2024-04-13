@@ -234,8 +234,11 @@ function speechRecog() {
 	  // Display the text on the screen
 	  document.getElementById("inputBox").value = text;
 
-	  processInput([text, 'displaymessage']);
 	};
+	
+	webkitSpeechRecognition.onend = function(event) {
+		processInput([document.getElementById("inputBox").value, 'displaymessage']);
+	}
 
 	// Start the speech recognition
 	recognition.start();
