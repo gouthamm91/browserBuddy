@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Browser Buddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="browserBuddy.js"></script>
+  <style type="text/css">
+    body, html {
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      font-family: verdana;
+    }
+    h2 {
+      font-family: verdana;
+      color: lightgreen;
+    }
+  </style>
+</head>
+<body onload="retriveStoredData()">
+  <center style="height: 99%;">
+  <div style="max-width: 500px; height: 100%; text-align: center; border: 1px solid gray;">
+      <h2>Browser Buddy</h2>
+
+      <div id="displaymessage" style="overflow: auto; height: 70%;"></div>
+  
+      <input id="inputBox" type="text" style="margin-bottom: 2px; width: 95.5%; padding: 5px; font-size: 110%; outline: none; " onchange="processInput([this.value, 'displaymessage']); this.value = ''" placeholder="Type Here..." />
+
+      <input type="button" style="margin-bottom: 2px; width: 99%; padding: 5px; font-size: 110%;" onclick="speechRecog()" value="Mic"/>
+      <input type="button" style="margin-bottom: 2px; width: 99%; padding: 5px; font-size: 110%;" onclick="deleteStoredData()" value="Delete Conversation History"/>
+  </div>
+  </center>
+</body>
+</html>
