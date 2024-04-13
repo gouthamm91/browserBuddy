@@ -62,6 +62,7 @@ lemmaIntentDict = lemmaIntentData[1];
 allIntentData = getAllIntentData();
 
 function processInput(i) {
+	if (i[0].trim() == "") {return;}
 	var processedData = intentRecognition(i[0].replace(/\?/g, ' ?').replace(/\!/g, ' !').replace(/\./g, ' .').replace(/\,/g, ' ,'));
 	var key = processedData[0];
 	var response = processedData[1];
