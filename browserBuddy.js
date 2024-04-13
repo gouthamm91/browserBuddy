@@ -236,7 +236,7 @@ function speechRecog() {
 
 	};
 	
-	webkitSpeechRecognition.onend = function(event) {
+	recognition.onend = function(event) {
 		processInput([document.getElementById("inputBox").value, 'displaymessage']);
 	}
 
